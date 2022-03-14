@@ -14,14 +14,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 html {
   @extend %reset;
 }
 .header {
   width: 100%;
-  height: 12vh;
+  height: 12%;
   background-color: $orangeColor;
   font-size: 2em;
   font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.content{
+  margin-top: 1vh;
+  width: 80%;
+  flex: inherit;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 100%;
+    height:15vh;
+    object-fit: cover;
+    object-position: center bottom;
+  }
 }
