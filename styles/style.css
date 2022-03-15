@@ -5,9 +5,11 @@ html, body {
 
 body {
   display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  justify-items: center;
 }
 
 .header {
@@ -24,8 +26,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex: inherit;
-  justify-content: center;
-  align-items: center;
 }
 .content img {
   width: 100%;
@@ -36,21 +36,59 @@ body {
 .content form {
   display: flex;
   flex: inherit;
-  align-self: center;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
-  width: 30vw;
+  width: 100%;
 }
 .content form div {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
 }
 .content form div label {
   width: 50%;
   display: inline-block;
 }
+.content form div select, .content form div input {
+  width: 50%;
+  margin: 2px 0 2px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align-last: center;
+}
+.btn-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
 
 .btn-orange {
   background: #f0750f;
   border-radius: 10px;
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.additional-info div {
+  width: 27.3333333333%;
+}
+
+.vertical-line {
+  width: 2px !important;
+  margin: 0 3% 0 3%;
+  border-left: 2px solid #f0750f;
+  height: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */

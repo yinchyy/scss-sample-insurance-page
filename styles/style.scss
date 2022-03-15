@@ -1,9 +1,11 @@
 $blueColor: #0097e1;
 $orangeColor: #f0750f;
-%flexCenter {
+
+@mixin flex($direction,$justify1,$justify2){
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: $direction;
+  justify-content: $justify1;
+  align-items: $justify2;
 }
 %reset {
   margin: 0;
@@ -12,9 +14,8 @@ $orangeColor: #f0750f;
 body {
   @extend %reset;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex(column,center,center);
+  justify-items: center;
 }
 html {
   @extend %reset;
@@ -32,8 +33,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   flex: inherit;
-  justify-content: center;
-  align-items: center;
   img{
     width: 100%;
     height:15vh;
@@ -43,19 +42,50 @@ html {
   form{
     display: flex;
     flex:inherit;
-    align-self: center;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
-    width: 30vw;
+    width: 100%;
     div{
-      width: 100%;
+      @include flex(row, center ,center );
+      width: 60%;
       label{
         width: 50%;
         display: inline-block;
       }
+      select{
+        width:50%;
+        margin: 2px 0 2px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-align-last: center;
+      }
+      input{
+        @extend select;
+      }
     }
   }
+}
+.btn-field{
+  @include flex(row,flex-end,center);
+  width:100%
 }
 .btn-orange{
   background: $orangeColor;
   border-radius: 10px;
+}
+.additional-info{
+  @include flex(row,center,center );
+  width: 100%;
+  div{
+    width: calc(100%/3 - 6%);
+  }
+  
+}
+.vertical-line {
+  width: 2px !important;
+  margin: 0 3% 0 3%;
+  border-left: 2px solid $orangeColor;
+  height: 90%;
 }
