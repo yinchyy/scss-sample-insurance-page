@@ -29,6 +29,8 @@ html {
 .content{
   margin-top: 1vh;
   width: 80%;
+  display: flex;
+  flex-wrap: wrap;
   flex: inherit;
   justify-content: center;
   align-items: center;
@@ -38,4 +40,22 @@ html {
     object-fit: cover;
     object-position: center bottom;
   }
+  form{
+    display: flex;
+    flex:inherit;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 30vw;
+    div{
+      width: 100%;
+      label{
+        width: 50%;
+        display: inline-block;
+      }
+    }
+  }
+}
+.btn-orange{
+  background: $orangeColor;
+  border-radius: 10px;
 }
