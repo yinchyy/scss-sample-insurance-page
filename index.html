@@ -10,9 +10,37 @@
        <p>We are <strong>your</strong> insurance company.</p>
 </div>
 <div class="content">
-   <img src="images/car.jpg" alt="We recommend our services"/> 
+    <img src="images/car.jpg" alt="We recommend our services"/> 
    <form>
-       
+       <div>
+           <label for="vehicletype">Vehicle type</label> 
+           <select id="vehicletype">
+               <option disabled selected hidden>---Pick option---</option>
+               <option>Car</option>
+               <option>Truck</option>
+               <option>Motorcycle</option>
+            </select>
+        </div>
+      <div>
+      <label for="brand">Vehicle brand</label> 
+      <select id="brand">
+        <option disabled selected hidden>---Pick option---</option>
+        <option>BMW</option>
+        <option>Mitsubishi</option>
+        <option>Citroen</option>
+      </select>
+      </div>
+      <div>
+      <label for="productionDate">Production date</label> 
+      <input type="number" min="1900" max="2022" id="productionDate"/>
+      </div>
+      <div>
+      <label for="driverAge">Driver age</label> 
+      <input type="number" min="13" id="driverAge"/>
+      </div>
    </form>
+   <div>
+       <button class="btn-orange">Detailed form</button>
+   </div>
 </body>
 </html>
