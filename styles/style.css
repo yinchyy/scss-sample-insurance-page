@@ -1,3 +1,22 @@
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+  .content {
+    font-size: 1.8em !important;
+  }
+  .content form div {
+    flex-wrap: wrap;
+  }
+  .content form div select, .content form div input {
+    width: 100% !important;
+    height: 70px;
+    font-size: 0.8em !important;
+    margin-bottom: 3% !important;
+  }
+  .content .btn-orange {
+    width: 65% !important;
+    height: 10vh !important;
+    font: inherit;
+  }
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -75,7 +94,7 @@ body {
   width: 100%;
 }
 .btn-field .btn-orange {
-  width: 10vw;
+  width: 60%;
   height: 10vh;
 }
 
@@ -95,6 +114,21 @@ body {
   width: 27.3333333333%;
 }
 .additional-info hr {
+  width: 30%;
+  border: 1px solid #0097e1;
+  margin-left: 2px;
+}
+
+.client-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.client-reviews div {
+  width: 100%;
+}
+.client-reviews div hr {
   width: 30%;
   border: 1px solid #0097e1;
   margin-left: 2px;

@@ -1,11 +1,38 @@
 $blueColor: #0097e1;
 $orangeColor: #f0750f;
 
+ @media only screen and (min-width: 300px) and (max-width:1000px){
+  .content{
+    font-size: 1.8em !important;
+    form{
+      div{
+        flex-wrap: wrap;
+        select{
+          width: 100% !important;
+          height: 70px;
+          font-size: 0.8em !important;
+          margin-bottom: 3% !important;
+        }
+      }
+    }
+    .btn-orange{
+      width: 65% !important;
+      height: 10vh !important;
+      font: inherit;
+    }
+  }
+}
+
 @mixin flex($direction,$justify1,$justify2){
   display: flex;
   flex-direction: $direction;
   justify-content: $justify1;
   align-items: $justify2;
+}
+@mixin title-underline {
+  width: 30%;
+  border: 1px solid $blueColor;
+  margin-left: 2px;
 }
 %reset {
   margin: 0;
@@ -78,7 +105,7 @@ html {
   @include flex(row,center,center);
   width:100%;
   .btn-orange{
-    width: 10vw;
+    width: 60%;
     height: 10vh;
   }
 }
@@ -93,11 +120,17 @@ html {
     width: calc(100%/3 - 6%);
   }
   hr{
-    width: 30%;
-    border: 1px solid $blueColor;
-    margin-left: 2px;
+    @include title-underline;
   }
-  
+}
+.client-reviews{
+  @include flex(column,center ,center );
+  div{
+    width: 100%;
+    hr{
+      @include title-underline;
+    }
+  }
 }
 .vertical-line {
   width: 2px !important;
