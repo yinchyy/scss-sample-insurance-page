@@ -11,10 +11,14 @@
     font-size: 0.8em !important;
     margin-bottom: 3% !important;
   }
-  .content .btn-orange {
+  .content .btn-field {
+    flex-wrap: wrap;
+  }
+  .content .btn-field .btn-orange, .content .btn-field .btn-blue {
     width: 65% !important;
     height: 10vh !important;
     font: inherit;
+    margin-bottom: 2%;
   }
 }
 html, body {
@@ -93,14 +97,24 @@ body {
   align-items: center;
   width: 100%;
 }
-.btn-field .btn-orange {
+.btn-field .btn-orange, .btn-field .btn-blue {
   width: 60%;
   height: 10vh;
 }
 
-.btn-orange {
+.btn-orange, .btn-blue {
   background: #f0750f;
-  border-radius: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-blue {
+  background: #0097e1;
 }
 
 .additional-info {

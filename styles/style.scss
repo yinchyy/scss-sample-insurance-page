@@ -15,10 +15,14 @@ $orangeColor: #f0750f;
         }
       }
     }
-    .btn-orange{
-      width: 65% !important;
-      height: 10vh !important;
-      font: inherit;
+    .btn-field{
+      flex-wrap: wrap;
+      .btn-orange{
+        width: 65% !important;
+        height: 10vh !important;
+        font: inherit;
+        margin-bottom: 2%;
+      }
     }
   }
 }
@@ -33,6 +37,10 @@ $orangeColor: #f0750f;
   width: 30%;
   border: 1px solid $blueColor;
   margin-left: 2px;
+}
+@mixin btn-color($color,$radius:15px){
+  background: $color;
+  border-radius: $radius;
 }
 %reset {
   margin: 0;
@@ -110,8 +118,14 @@ html {
   }
 }
 .btn-orange{
-  background: $orangeColor;
-  border-radius: 10px;
+  @include btn-color($orangeColor);
+  @include flex(row,center ,center );
+  text-decoration: none;
+  color: black;
+}
+.btn-blue{
+  @extend .btn-orange;
+  background: $blueColor;
 }
 .additional-info{
   @include flex(row,center,center );
