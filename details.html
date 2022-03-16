@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Insurance</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+<div class="header">
+       <p>We are <strong>your</strong> insurance company.</p>
+</div>
+<div class="content">
+   <form>
+       <div>
+           <label for="vehicletype">Vehicle type</label> 
+           <select id="vehicletype">
+               <option disabled selected hidden>---Pick option---</option>
+               <option>Car</option>
+               <option>Truck</option>
+               <option>Motorcycle</option>
+            </select>
+        </div>
+      <div>
+      <label for="brand">Vehicle brand</label> 
+      <select id="brand">
+        <option disabled selected hidden>---Pick option---</option>
+        <option>BMW</option>
+        <option>Mitsubishi</option>
+        <option>Citroen</option>
+      </select>
+      </div>
+      <div>
+      <label for="productionDate">Production date</label> 
+      <input type="number" min="1900" max="2022" id="productionDate"/>
+      </div>
+      <div>
+      <label for="fuel-type">Fuel type</label> 
+      <select id="fuel-type">
+        <option disabled selected hidden>---Pick option---</option>
+        <option>Gasoline</option>
+        <option>Diesel</option>
+        <option>Gasoline + LPG</option>
+        <option>Diesel + CNG</option>
+        <option>Hybrid</option>
+        <option>Fully electric</option>
+      </select>
+      </div>
+      <div>
+      <label for="displacement">Engine displacement</label> 
+      <input type="number" min="0" id="displacement"/>
+      </div>
+      <div>
+      <label for="doors-count">Doors quantity</label> 
+      <input type="number" min="0" id="doors-count"/>
+      </div>
+      <div>
+      <label for="registration-date">Registration date</label> 
+      <input type="text" id="registration-date"/>
+      </div>
+      <div>
+      <label for="driverAge">Driver age</label> 
+      <input type="number" min="13" id="driverAge"/>
+      </div>
+      <div>
+      <label for="coverage-type">Coverage type</label> 
+      <select id="coverage-type" multiple>
+        <option disabled selected hidden>---Pick option---</option>
+        <option>Liability insurance</option>
+        <option>AC</option>
+        <option>Assistance</option>
+        <option>Accidental Death and Dismemberment</option>
+      </select>
+      </div>
+      <div>
+      <label for="name-surname">Name and surname</label> 
+      <input type="text" id="name-surname"/>
+      </div>
+   </form>
+   <div class="btn-field">
+       <a class="btn-orange">Apply for detailed calculation</a>
+       <a class="btn-blue" href="index.html">Return to main page</a>
+   </div>
+</div>   
+</body>
+</html>
